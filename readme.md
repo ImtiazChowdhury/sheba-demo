@@ -1,6 +1,6 @@
 # Edtech System Demo
 
-This is a demo application for ed-tech as per requirements. I have taken some liberty to design the API as I saw fit and used a custom modular code architecture using `express`. I have also used some of my own modules to make the development easier like `@imtiazchowdhury/mongopool` and `mongodb-paginate`.
+This is a demo application for ed-tech. I have taken some liberty to design the API as I saw fit and used a custom modular code architecture using `express`. I have also used some of my own modules to make the development easier like `@imtiazchowdhury/mongopool` and `mongodb-paginate`.
 
 ## Installation
 
