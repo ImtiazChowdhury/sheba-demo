@@ -11,6 +11,7 @@ const formidableMiddleware = require('express-formidable');
 const mongoClient = require("@imtiazchowdhury/mongopool").default
 mongoClient.url = process.env.MONGO_URL;
 mongoClient.dbName = process.env.DB_NAME;
+mongoClient.writeErrLogsToFIle = false;
 
 const app = express();
 

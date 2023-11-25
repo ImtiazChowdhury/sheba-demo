@@ -1,6 +1,6 @@
 const CourseOperation = require("./operation/CourseOperation");
 
-class CourseModule {
+class CourseApi {
     constructor({ queryParser, parameterParser, formParser }) {
         this.operation = new CourseOperation()
         this.queryParser = queryParser;
@@ -39,4 +39,4 @@ class CourseModule {
 
 
 
-module.exports = CourseModule;
+module.exports = CourseApi;

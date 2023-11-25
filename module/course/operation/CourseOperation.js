@@ -7,7 +7,7 @@ const courseCreateValidator = require("../validator/courseCreateValidator");
 class CourseOperation {
 
     constructor() {
-        this.db = new CourseDB()
+        this.dbOps = new CourseDB()
     }
 
     async create(input) {
@@ -17,7 +17,7 @@ class CourseOperation {
 
         const formattedEntity = await courseCreateFormatter(input);
 
-        const writeResult = await this.db.writeOne(formattedEntity);
+        const writeResult = await this.dbOps.writeOne(formattedEntity);
 
         return {
             ...formattedEntity,
@@ -30,14 +30,14 @@ class CourseOperation {
         const validationErrors = await courseListValidator(filter)
         if (validationErrors) throw new HTTPException(400, "Invalid input", validationErrors)
 
-        return await this.db.list(filter, paginationOptions)
+        return await this.dbOps.list(filter, paginationOptions)
     }
 
     async detail(id) {
         const validationErrors = await courseDetailValidator(id)
         if (validationErrors) throw new HTTPException(400, "Invalid input", validationErrors)
 
-        const detailResult = await this.db.detail(id);
+        const detailResult = await this.dbOps.detail(id);
         if (!detailResult) throw new HTTPException(400, "Item not found", {id: "No record found with id"})
 
         return detailResult;
