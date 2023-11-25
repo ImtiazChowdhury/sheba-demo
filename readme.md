@@ -51,9 +51,9 @@ The application currently has the following API endpoints:
 
 ### Create Course
 
-**Endpoint**: `/course`
-**Method**: `POST`
-**Content-Type**: `application/json` | `multipart/form-data` | `application/x-www-form-urlencoded`
+**Endpoint**: `/course`  
+**Method**: `POST`  
+**Content-Type**: `application/json` | `multipart/form-data` | `application/x-www-form-urlencoded`  
 **Request Body**:
 
 ```ts
@@ -92,8 +92,8 @@ status 400:
 
 ### List Course
 
-**Endpoint**: `/course`
-**Method**: `GET`
+**Endpoint**: `/course`  
+**Method**: `GET`  
 **Request Parameters**:
 
 |Parameter  |Value                                          |
@@ -132,7 +132,7 @@ status 200:
 
 ### Course Detail
 
-**Endpoint**: `/course/:id`
+**Endpoint**: `/course/:id`  
 **Method**: `GET`  
 **URL Parameters**:
 
@@ -157,9 +157,9 @@ status 200:
 
 ### Create Enrollment
 
-**Endpoint**: `/enrollment`
-**Method**: `POST`
-**Content-Type**: `application/json` | `multipart/form-data` | `application/x-www-form-urlencoded`
+**Endpoint**: `/enrollment`  
+**Method**: `POST`  
+**Content-Type**: `application/json` | `multipart/form-data` | `application/x-www-form-urlencoded`  
 **Request Body**:
 
 ```ts
